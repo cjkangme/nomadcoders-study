@@ -1,0 +1,91 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#wrap {
+  background-color: #a0daa9;
+  width: 60vw;
+  height: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-box {
+  width: 15%;
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5% auto;
+}
+
+.dot {
+  background-color: #fff;
+  width: 12%;
+  height: 12%;
+  border-radius: 50%;
+}
+
+.bar {
+  background-color: #fff;
+  width: 15%;
+  height: 60%;
+}
+
+.rotate-dot {
+  animation: rotate 1s ease-out infinite;
+}
+
+.bar:nth-child(1) {
+  animation: wave 1s 0s ease-in-out infinite;
+}
+.bar:nth-child(2) {
+  animation: wave 1s 0.1s ease-in-out infinite;
+}
+.bar:nth-child(3) {
+  animation: wave 1s 0.2s ease-in-out infinite;
+}
+.bar:nth-child(4) {
+  animation: wave 1s 0.3s ease-in-out infinite;
+}
+.bar:nth-child(5) {
+  animation: wave 1s 0.4s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  50% {
+    transform: rotateZ(180deg);
+  }
+
+  100% {
+    transform: rotateZ(180deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: scaleY(1);
+  }
+
+  20% {
+    transform: scaleY(2);
+  }
+
+  40% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
