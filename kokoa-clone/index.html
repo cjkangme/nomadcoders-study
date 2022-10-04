@@ -150,12 +150,12 @@
       </header>
       <!-- welcome-header end -->
 
-      <form class="login--form">
-        <input type="text" placeholder="Email or phone number">
-        <input type="password" placeholder="Password">
+      <form class="login--form" action="friends.html" method="get">
+        <input name="username" class="login--form__input" type="text" placeholder="Email or phone number">
+        <input name="password" class="login--form__input" type="password" placeholder="Password">
         <!-- div를 버튼처럼 설정하기 To Do -->
-        <div class="login--form__btn log-in--btn btn">Log In</div>
-        <div class="login--form__btn sign-up--btn btn">Sign Up</div>
+        <input type="submit" class="login--form__btn log-in--btn btn" value="Log In">
+        <a href="#" class="login--form__btn sign-up--btn btn">Sign Up</a>
         <a href="#" class="login--form__link">Find Kokoa Account or Password</a>
       </form>
   </body>
