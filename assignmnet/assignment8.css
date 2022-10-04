@@ -13,6 +13,7 @@ body {
   border: 5px solid tomato;
   overflow: auto;
   font-family: 'Kanit', sans-serif;
+  margin: auto;
 }
 
 .box {
@@ -49,6 +50,8 @@ body {
 
 .header__title {
   line-height: 64px;
+  font-size: 2em;
+  font-weight: 600;
 }
 
 /* header end */
@@ -106,6 +109,12 @@ body {
 .button__main:hover,
 .button__sub:hover {
   background-color: rgba(255, 99, 71, 0.5);
+}
+.button__main:active,
+.button__sub:active {
+  box-shadow: none;
+  position: relative;
+  top: 5px;
 }
 
 .button__main {

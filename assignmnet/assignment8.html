@@ -44,7 +44,31 @@
         <div class="current-music__subtitle">by OneRepublic</div>
       </div>
       <div class="button">
-        <a href="#" class="button__main box">
+        <a
+          href="#"
+          class="button__main box"
+          onclick="
+      let randomNumber = Math.floor(Math.random() * 10);
+      let colorlist = [
+        '#9BB7D4',
+        '#1B7340',
+        '#E9897E',
+        '#0072B5',
+        '#FDAC53',
+        '#B55A30',
+        '#A0DAA9',
+        '#F19828',
+        '#D2386C',
+        '#926AA6',
+      ];
+      const image = document.querySelectorAll('.list-music__image');
+      var i = 0;
+      while (i < image.length) {
+        var color = colorlist[Math.floor(Math.random() * 10)];
+        image[i].style.backgroundColor = color;
+        i++;
+      }"
+        >
           <div class="button__icon">
             <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
             <svg
@@ -121,21 +145,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      let randomNumber = Math.floor(Math.random() * 10);
-      let colorlist = [
-        '#9BB7D4',
-        '#1B7340',
-        '#E9897E',
-        '#0072B5',
-        '#FDAC53',
-        '#B55A30',
-        '#A0DAA9',
-        '#F19828',
-        '#D2386C',
-        '#926AA6',
-      ];
-    </script>
   </body>
 </html>
