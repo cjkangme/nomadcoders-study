@@ -8,6 +8,7 @@
 .screen-header__title {
   font-size: 2em;
   font-weight: 600;
+  color: var(--black);
 }
 
 .screen-header__icon {
@@ -19,4 +20,5 @@
   height: 32px;
   margin-left: 30px;
   cursor: pointer;
+  color: var(--black);
 }
