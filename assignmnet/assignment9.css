@@ -192,8 +192,9 @@
 /* Recommend List start */
 .recommend-list {
   display: flex;
+  justify-content: left;
   align-items: center;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .recommend-list__section {
