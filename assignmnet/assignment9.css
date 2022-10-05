@@ -1,0 +1,244 @@
+@import 'reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+
+/* variables */
+:root {
+  --main-color: #183153;
+  --gray: #e4e4e4;
+}
+
+/* body & components */
+* {
+  font-family: 'Open Sans', 'Alkalami', sans-serif;
+  color: var(--main-color);
+}
+
+.icon--rating {
+  color: #ffc72d;
+  margin-right: 5px;
+}
+
+.icon--unrating {
+  color: rgba(0, 0, 0, 0.3);
+  margin-right: 5px;
+}
+
+/* Header start */
+.header {
+  width: 100%;
+  height: 100px;
+  background-color: #ffc72d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 20px;
+  box-sizing: border-box;
+}
+
+.header__title {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+/* Header end */
+
+/* Search-bar start */
+.search-bar {
+  width: calc(100% - 20px);
+  height: 50px;
+  background-color: #fff;
+  margin: auto;
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 30px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-bar__input {
+  border: none;
+  outline: none;
+}
+.search-bar__input::placeholder {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+.search-bar__icon {
+  color: rgba(0, 0, 0, 0.2);
+}
+/* Search-bar end */
+
+.article {
+  width: calc(100% - 20px);
+  margin: auto;
+}
+
+.article__title {
+  font-family: 'Alkalami';
+  font-size: 2em;
+  margin: 15px 0;
+  color: #000;
+}
+
+/* Book-information start */
+.book-information {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr 2fr 2fr;
+  justify-content: left;
+  align-items: center;
+}
+
+.book-information__cell {
+  display: flex;
+  align-items: center;
+}
+.book-information__cell:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 6;
+  justify-content: center;
+}
+.book-information__cell:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.book-information__cell:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.book-information__cell:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  display: flex;
+  align-items: center;
+}
+.book-information__cell:nth-child(5) {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
+.book-information__cell:nth-child(6) {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+}
+
+.book-information__img {
+  margin: 5px;
+  height: 200px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.book-information__title {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.book-information__subtitle {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.book-information__icon {
+  margin-left: 10px;
+}
+.book-information__icon:first-child {
+  margin-left: 10px;
+}
+
+.book-information__link {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 30px;
+  margin-left: 10px;
+  padding: 0 20px;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.book-information__link:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.book-information__link--circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #ffc72d;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-information__link--big {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 45px;
+  margin-left: 50px;
+  padding: 0 40px;
+  border-radius: 10px;
+  background-color: #000;
+  color: #fff;
+}
+.book-information__link--big:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Book-information end */
+
+/* Recommend List start */
+.recommend-list {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.recommend-list__section {
+  margin-right: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.recommend-list__icon {
+  height: 20px;
+  margin-top: 15px;
+  display: flex;
+}
+
+.recommend-list__img {
+  width: 100px;
+  height: 135px;
+  border-radius: 10px;
+}
+/* recommend-list end */
+
+/* Popular-autors start */
+.authors {
+  display: flex;
+  align-items: center;
+}
+
+.authors__text {
+  margin: 5px 25px 5px;
+}
+
+.authors__img {
+  width: calc(346px / 2);
+  height: calc(408px / 2);
+  border-radius: 10px;
+}
+
+.authors__title {
+  font-size: 1.5em;
+  font-weight: 600;
+  padding: 10px 0;
+}
+
+.authors__p {
+  color: rgba(0, 0, 0, 0.4);
+  padding: 10px 0;
+}
