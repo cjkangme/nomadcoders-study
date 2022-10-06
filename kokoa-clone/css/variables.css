@@ -1,7 +1,14 @@
 :root {
+  /* color */
   --yellow: #fae100;
   --gray: #f9f9fa;
+  --dark-gray: rgba(0, 0, 0, 0.5);
   --black: #2f363e;
+
+  /* margin & padding */
   --horizontal-space: 25px;
+
+  /* border */
   --separator: 1px solid rgba(0, 0, 0, 0.2);
+  --sub-separator: 1px solid rgba(0, 0, 0, 0.1);
 }

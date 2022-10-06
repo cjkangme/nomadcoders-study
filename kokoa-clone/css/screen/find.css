@@ -1,9 +1,9 @@
+/* icons */
 .find-icons {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 30px;
-  border-bottom: var(--separator);
 }
 
 .find-icons__icons {
@@ -18,4 +18,28 @@
 
 .find-icons__text {
   margin-top: 30px;
+}
+/* icons end */
+
+/* recommend */
+.recommend-friends {
+  border-top: var(--separator);
+  border-bottom: var(--separator);
+  padding: 25px 0;
+}
+
+.recommend-friends__title {
+  font-size: 1.2em;
+  color: var(--dark-gray);
+}
+
+.recommend-friends__text {
+  margin: 110px;
+  display: flex;
+  justify-content: center;
+}
+
+.recommend-friends__text span {
+  font-size: 1.5em;
+  color: var(--dark-gray);
 }
