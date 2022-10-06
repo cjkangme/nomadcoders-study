@@ -12,6 +12,7 @@
 /* Screens */
 @import 'screen/login.css';
 @import 'screen/friends.css';
+@import 'screen/find.css';
 
 body {
   font-family: 'Noto Sans KR', sans-serif;

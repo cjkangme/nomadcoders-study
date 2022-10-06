@@ -1,0 +1,21 @@
+.find-icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: var(--separator);
+}
+
+.find-icons__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.find-icons__icons i {
+  font-size: 2rem;
+}
+
+.find-icons__text {
+  margin-top: 30px;
+}
