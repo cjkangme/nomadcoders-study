@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Friends - Kokoa Colne</title>
+    <title>Chats - Kokoa Colne</title>
 
     <link rel="stylesheet" href="./css/reset.css">
     <link href="./css/style.css" rel="stylesheet">
@@ -146,10 +146,11 @@
     <!-- status-bar end -->
 
     <header class="screen-header">
-      <h1 class="screen-header__title">Friends</h1>
+      <h1 class="screen-header__title">Chats</h1>
       <div class="screen-header__icon">
         <!-- Search Icon -->
         <span><?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g id="search"><path d="M29.71,28.29l-6.5-6.5-.07,0a12,12,0,1,0-1.39,1.39s0,.05,0,.07l6.5,6.5a1,1,0,0,0,1.42,0A1,1,0,0,0,29.71,28.29ZM14,24A10,10,0,1,1,24,14,10,10,0,0,1,14,24Z"/></g></svg></span>
+        <span><i class="fa-regular fa-comment-dots fa-2x"></i></span>
         <!-- Music Icon -->
         <span><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 48 48" height="48px" version="1.1" viewBox="0 0 48 48" width="48px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Expanded"><g><g><path d="M14,46c-3.309,0-6-2.691-6-6s2.691-6,6-6h6v6C20,43.196,17.196,46,14,46z M14,36c-2.206,0-4,1.794-4,4s1.794,4,4,4     c2.289,0,4-2.112,4-4v-4H14z"/></g><g><path d="M34,40c-3.309,0-6-2.691-6-6s2.691-6,6-6h6v6C40,37.196,37.196,40,34,40z M34,30c-2.206,0-4,1.794-4,4s1.794,4,4,4     c2.289,0,4-2.112,4-4v-4H34z"/></g><g><polygon points="20,35 18,35 18,10.323 40,1.523 40,29 38,29 38,4.477 20,11.677    "/></g><g><rect height="21.541" transform="matrix(0.3711 0.9286 -0.9286 0.3711 31.24 -18.1245)" width="2" x="28" y="3.23"/></g></g></g></svg></span>
         <!-- Setting Icon -->
@@ -158,50 +159,28 @@
     </header>
     <!-- Screen Header end -->
 
-    <a class="friends-display-link" href="#">
-      <div class="friends-display-link__icon"><i class="fa-solid fa-circle-info fa-lg"></i></div>
-      <div class="friends-display-link__text">Friends' Names Display </div>
-      <div class="friends-display-link__icon"><i class="fa-solid fa-angle-right"></i></div>
-    </a>
-    <!-- friends display link end -->
-
-    <main class="friends-screen">
+    <main class="main-screen">
       <div class="user-component">
         <div class="user-component__column">
-          <img class="user-component__avartar avartar--large" src="assets/user-profile.jpg" alt="user profile">
+          <img class="user-component__avartar avartar--medium" src="assets/user-profile.jpg" alt="user profile">
           <div class="user-component__text">
             <div class="user-component__title">Kang Changjin</div>
-            <!-- <div class="user-component__subtitle"></div> -->
-          </div>
-        </div>
-        <div class="user-component__column"></div>
-      </div>
-      <div class="friends-screen__channel-header">
-        <span class=>channel</span>
-        <i class="fa-solid fa-angle-up"></i>
-      </div>
-      <div class="user-component">
-        <div class="user-component__column">
-          <img class="user-component__avartar avartar--small" src="assets/user-profile.jpg" alt="user profile">
-          <div class="user-component__text">
-            <div class="user-component__title">Channel</div>
-            <!-- <div class="user-component__subtitle"></div> -->
+            <div class="user-component__subtitle">Please check My KoKoa Account Info</div>
           </div>
         </div>
         <div class="user-component__column">
-            <span>2</span>
-            <i class="fa-solid fa-angle-right"></i>
+            <span class="user-component__time">21:22</span>
+            <span class="user-component__badge badge">1</span>
         </div>
-        <div class="user-component__column"></div>
       </div>
     </main>
 
     <nav class="navigation">
       <ul class="navigation__ul">
-          <li class="navigation__li"><a href="friends.html" class="navigation__link"><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.0//EN'  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'><svg enable-background="new 0 0 24 24" id="Layer_1" version="1.0" viewBox="0 0 24 24" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="12" cy="8" r="4"/><path d="M12,14c-6.1,0-8,4-8,4v2h16v-2C20,18,18.1,14,12,14z"/></svg></a></li>
-          <li class="navigation__li"><a href="chats.html" class="navigation__link"><span class="navigation__notification">1</span><?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><path d="M47,24c0,10.493-9.85,19-22,19  c-2.076,0-4.085-0.248-5.99-0.712c0,0-3.807,4.739-10.01,4.712c3.001-4.258,2.996-7.673,2.996-7.673C6.541,35.869,3,30.292,3,24  C3,13.507,12.849,5,25,5C37.15,5,47,13.507,47,24z" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="1.8586"/></svg></a></li>
+          <li class="navigation__li"><a href="friends.html" class="navigation__link"><i class="fa-regular fa-user fa-2x"></i></a></li>
+          <li class="navigation__li"><a href="chats.html" class="navigation__link"><span class="navigation__notification badge">1</span><i class="fa-solid fa-comment fa-2x" style="color: #000;"></i></a></li>
           <li class="navigation__li"><a href="find.html" class="navigation__link"><?xml version="1.0" ?><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><title/><g id="search"><path d="M29.71,28.29l-6.5-6.5-.07,0a12,12,0,1,0-1.39,1.39s0,.05,0,.07l6.5,6.5a1,1,0,0,0,1.42,0A1,1,0,0,0,29.71,28.29ZM14,24A10,10,0,1,1,24,14,10,10,0,0,1,14,24Z"/></g></svg></a></li>
-          <li class="navigation__li"><a href="more.html" class="navigation__link"><span class="navigation__notification--small"></span><?xml version="1.0" ?><svg enable-background="new 0 0 32 32" id="Editable-line" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="16" cy="16" fill="none" id="XMLID_878_" r="2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><circle cx="6" cy="16" fill="none" id="XMLID_879_" r="2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><circle cx="26" cy="16" fill="none" id="XMLID_880_" r="2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/></svg></a></li>
+          <li class="navigation__li"><a href="more.html" class="navigation__link"><span class="navigation__notification--small badge--small"></span><?xml version="1.0" ?><svg enable-background="new 0 0 32 32" id="Editable-line" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><circle cx="16" cy="16" fill="none" id="XMLID_878_" r="2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><circle cx="6" cy="16" fill="none" id="XMLID_879_" r="2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><circle cx="26" cy="16" fill="none" id="XMLID_880_" r="2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/></svg></a></li>
       </ul>
     </nav>
   </body>

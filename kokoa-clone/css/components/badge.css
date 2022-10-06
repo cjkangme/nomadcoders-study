@@ -1,0 +1,22 @@
+.badge,
+.badge--small {
+  background-color: tomato;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.badge {
+  width: 25px;
+  height: 25px;
+  font-size: 0.7em;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+.badge--small {
+  width: 5px;
+  height: 5px;
+}

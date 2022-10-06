@@ -7,6 +7,7 @@
 @import 'components/nav-bar.css';
 @import 'components/header-screen.css';
 @import 'components/user-component.css';
+@import 'components/badge.css';
 
 /* Screens */
 @import 'screen/login.css';
@@ -15,4 +16,8 @@
 body {
   font-family: 'Noto Sans KR', sans-serif;
   font-family: 'Roboto', sans-serif;
+}
+
+.main-screen {
+  padding: 0 var(--horizontal-space);
 }

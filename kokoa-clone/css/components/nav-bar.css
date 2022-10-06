@@ -23,27 +23,13 @@
   height: 32px;
 }
 
-.navigation__notification,
-.navigation__notification--small {
-  background-color: tomato;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  color: #fff;
-}
 .navigation__notification {
-  width: 20px;
-  height: 20px;
-  font-size: 0.7em;
-  font-weight: 600;
-  right: -5px;
+  position: absolute;
+  right: -10px;
   bottom: 20px;
 }
 .navigation__notification--small {
-  width: 5px;
-  height: 5px;
+  position: absolute;
   right: -5px;
   bottom: 30px;
 }
