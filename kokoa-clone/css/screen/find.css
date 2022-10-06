@@ -37,9 +37,67 @@
   margin: 110px;
   display: flex;
   justify-content: center;
+  color: var(--dark-gray);
+  text-align: center;
 }
 
 .recommend-friends__text span {
   font-size: 1.5em;
+  /* color: var(--dark-gray); */
+}
+
+.open-chat__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.8;
+  margin-bottom: 25px;
+}
+
+.open-chat__text {
+  opacity: 0.6;
+}
+
+.open-post {
+  display: flex;
+  justify-content: space-between;
+}
+
+.open-post__title {
+  font-weight: 600;
+  margin-bottom: 7px;
+  font-size: 1.2em;
+}
+
+.open-post__hashtags {
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.open-post__members {
+  margin-top: 7px;
+  display: flex;
+  align-items: center;
+}
+
+.open-post__members img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.open-post__member-count {
   color: var(--dark-gray);
+}
+
+.open-post__members .divider {
+  width: 1px;
+  height: 15px;
+  background-color: var(--dark-gray);
+  margin: 0 5px;
+}
+
+.open-post__member-status {
+  color: rgb(255, 175, 188);
 }
