@@ -21,3 +21,19 @@
 .fa-solid {
   color: #d5d5d5;
 }
+
+.friends-screen__channel {
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: var(--separator);
+}
+
+.friends-screen__channel-header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.friends-screen__channel-header span {
+  color: rgba(0, 0, 0, 0.5);
+}

@@ -3,4 +3,5 @@
   --gray: #f9f9fa;
   --black: #2f363e;
   --horizontal-space: 25px;
+  --separator: 1px solid rgba(0, 0, 0, 0.2);
 }
