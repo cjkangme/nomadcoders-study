@@ -1,7 +1,6 @@
 .user-component {
   display: flex;
   align-items: center;
-  margin: 10px 25px;
 }
 
 .user-component__column:first-child {
@@ -10,7 +9,7 @@
 }
 
 .user-component__avartar {
-  border-radius: 30px;
+  border-radius: 30%;
   margin-right: 20px;
 }
 
