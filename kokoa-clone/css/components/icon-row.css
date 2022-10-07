@@ -1,0 +1,25 @@
+/* icons */
+.icon-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.icon-row__icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-row__icons i {
+  font-size: 2rem;
+}
+
+.icon-row__text {
+  margin-top: 30px;
+}
+
+.icon-row__icons--hidden {
+  visibility: hidden;
+}

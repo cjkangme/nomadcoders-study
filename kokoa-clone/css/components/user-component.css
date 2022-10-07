@@ -40,6 +40,22 @@
 .user-component__subtitle {
   color: rgba(0, 0, 0, 0.5);
   margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.user-component__warning {
+  width: 12px;
+  height: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid tomato;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+.user-component__warning i {
+  color: tomato;
 }
 
 .user-component__column:last-child {
