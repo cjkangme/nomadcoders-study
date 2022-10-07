@@ -9,6 +9,7 @@
 @import 'components/user-component.css';
 @import 'components/badge.css';
 @import 'components/icon-row.css';
+@import 'components/alt-header.css';
 
 /* Screens */
 @import 'screen/login.css';

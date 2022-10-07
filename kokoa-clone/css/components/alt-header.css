@@ -1,0 +1,38 @@
+.alt-header {
+  padding: 0 var(--horizontal-space);
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alt-header__column {
+  margin: 0 auto;
+}
+
+.alt-header__column:first-child {
+  margin-left: 0;
+}
+.alt-header__column:last-child {
+  margin-right: 0;
+}
+
+.settings-list {
+  padding-left: 0;
+  padding-bottom: 15px;
+  border-bottom: var(--sub-separator);
+}
+
+.settings__setting {
+  padding: 15px 0;
+  display: flex;
+  align-items: center;
+}
+.settings__setting i {
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.settings__text {
+  font-size: 1.2em;
+}
