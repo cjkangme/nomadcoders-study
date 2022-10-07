@@ -11,3 +11,36 @@
   font-weight: 600;
   margin-bottom: 30px;
 }
+
+.more-suggestions__icons {
+  display: flex;
+}
+
+.more-suggetions__icon {
+  width: 25%;
+  box-sizing: border-box;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.more-suggetions__icon-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.more-suggetions__icon i {
+  color: #fff;
+}
+
+.more-suggetions__icon-text {
+  color: var(--dark-gray);
+  white-space: nowrap;
+}
