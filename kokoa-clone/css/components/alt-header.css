@@ -17,22 +17,6 @@
   margin-right: 0;
 }
 
-.settings-list {
-  padding-left: 0;
-  padding-bottom: 15px;
-  border-bottom: var(--sub-separator);
-}
-
-.settings__setting {
-  padding: 15px 0;
-  display: flex;
-  align-items: center;
-}
-.settings__setting i {
-  margin-right: 10px;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.settings__text {
-  font-size: 1.2em;
+.alt-header__column i {
+  margin-left: 10px;
 }
