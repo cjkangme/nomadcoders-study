@@ -27,6 +27,7 @@ body {
   border-radius: 30px;
   background-color: #fff;
   padding: 35px 10px;
+  position: relative;
 }
 
 /* screen end */
@@ -208,6 +209,9 @@ body {
   background-color: var(--black);
   color: #fff;
   margin: 10px auto;
+  position: absolute;
+  left: 25px;
+  bottom: 0px;
 }
 
 .current-music__subtitle {
