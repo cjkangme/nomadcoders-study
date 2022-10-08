@@ -24,4 +24,42 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 25px;
+}
+
+.message-row {
+  width: 100%;
+  display: flex;
+}
+
+.message-row__img {
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+
+.message-row__author {
+  display: block;
+  color: var(--dark-gray);
+  margin-bottom: 8px;
+}
+
+.message-row__message {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__bubble {
+  background-color: #fff;
+  padding: 10px 15px;
+  border-radius: 15px;
+  border-top-left-radius: 0px;
+  margin-right: 5px;
+  font-size: 1.2em;
+}
+
+.message__time {
+  color: var(--dark-gray);
+  font-size: 0.8em;
 }
