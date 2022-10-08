@@ -10,7 +10,7 @@
     <script src="https://kit.fontawesome.com/6682c71b2e.js" crossorigin="anonymous"></script>
   </head>
   <body id="chat-screen">
-    <div class="status-bar">
+    <div class="status-bar status-bar--chat">
       <div class="status-bar__column"></div>
       <div class="status-bar__column">
         <span>08:26</span>
@@ -144,20 +144,33 @@
     </div>
     <!-- status-bar end -->
 
-    <header class="alt-header">
+    <header class="alt-header alt-header--chat">
         <div class="alt-header__column">
-            <a href="more.html">
-                <i class="fa-solid fa-angle-left fa-2x" style="color: #000;"></i>
+            <a href="chats.html">
+                <i class="fa-solid fa-angle-left fa-xl" style="color: #000;"></i>
             </a>
         </div>
         <div class="alt-header__column"><h1 class="alt-header__title">Changjin Kang</h1></div>
         <div class="alt-header__column">
-            <i class="fa-solid fa-magnifying-glass fa-2x" style="color: #000;"></i>
-            <i class="fa-solid fa-bars fa-2x" style="color: #000;"></i>
+            <i class="fa-solid fa-magnifying-glass fa-xl" style="color: #000;"></i>
+            <i class="fa-solid fa-bars fa-xl" style="color: #000;"></i>
         </div>
     </header>
+    <!-- alt-header end -->
 
-    <main class="main-screen">
+    <main class="main-screen main-chat">
+      <div class="main-chat__timestamp">Sunday, October 08, 2022</div>
+      <!-- time-stamp end -->
+      <div class="message-row">
+        <img class="message-row__img" src="file:///D:/coding/nomadcoders-study/kokoa-clone/assets/user-profile.jpg" alt="nicolas img">
+        <div class="message-row__content">
+          <span class="message-row__author">Nicolas Serrano</span>
+          <div class="message-row__message">
+            <span class="message__bubble">Hi!</span>
+            <span class="message__time">21:27</span>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>

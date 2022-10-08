@@ -4,19 +4,40 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 5;
+}
+
+.alt-header--chat {
+  background-color: #abc1d1;
+  z-index: 1;
 }
 
 .alt-header__column {
+  width: calc(100% / 3);
+  box-sizing: border-box;
   margin: 0 auto;
 }
 
 .alt-header__column:first-child {
   margin-left: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.alt-header__column:nth-child(2) {
+  margin-left: 0;
+  display: flex;
+  justify-content: center;
 }
 .alt-header__column:last-child {
   margin-right: 0;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .alt-header__column i {
-  margin-left: 10px;
+  margin-left: 20px;
+}
+
+.alt-header__title {
+  font-size: 1.5em;
 }
