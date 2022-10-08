@@ -38,3 +38,17 @@
 .friends-screen__channel-header span {
   color: rgba(0, 0, 0, 0.5);
 }
+
+#splash-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--yellow);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+  font-size: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
