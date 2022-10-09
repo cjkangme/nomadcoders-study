@@ -1,0 +1,24 @@
+.no-desktop {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 99;
+  width: 100vw;
+  height: 120vh;
+  font-size: 1.2em;
+  background-color: var(--yellow);
+  opacity: 0.97;
+}
+@media screen and (max-width: 550px) {
+  .no-desktop {
+    display: none;
+  }
+}
+@media screen and (orientation: portrait) {
+  .no-desktop {
+    display: none;
+  }
+}

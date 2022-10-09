@@ -1,5 +1,5 @@
 #chat-screen {
-  height: 150vh;
+  height: 100vh;
   background-color: #abc1d1;
 }
 
@@ -141,7 +141,7 @@
 }
 
 .message-input:focus-within input {
-  transform: translateX(-12%) translateY(-80px);
+  transform: translateX(-13%) translateY(-80px);
   width: 90vw;
 }
 
