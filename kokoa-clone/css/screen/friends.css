@@ -51,4 +51,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: loading-screen 1s 1s ease forwards;
+}
+
+@keyframes loading-screen {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
