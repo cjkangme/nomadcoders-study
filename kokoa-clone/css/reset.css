@@ -362,3 +362,7 @@ a {
 a:visited {
   color: #000;
 }
+
+input[type='submit' i] {
+  border: none;
+}

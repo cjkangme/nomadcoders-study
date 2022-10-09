@@ -12,6 +12,7 @@
 @import 'components/alt-header.css';
 
 /* Screens */
+@import 'screen/index.css';
 @import 'screen/login.css';
 @import 'screen/friends.css';
 @import 'screen/find.css';
