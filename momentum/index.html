@@ -7,11 +7,15 @@
     <title>Momentum App</title>
 
     <link rel="stylesheet" href="css/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/6682c71b2e.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!-- Clock -->
     <h2 id="clock">00:00:00</h2>
-    <!-- Clock end -->
 
     <!-- Greeting -->
     <form class="login-form hidden">
@@ -25,7 +29,6 @@
       <button class="login-form__button">Log in</button>
     </form>
     <h1 id="greeting" class="hidden"></h1>
-    <!-- Greeting end -->
 
     <!-- To Do List -->
     <form id="todo-form">
@@ -33,9 +36,11 @@
         class="todo-form__input"
         type="text"
         placeholder="Write New Todo and Press Enter"
+        required
       />
     </form>
     <ul id="todo-list"></ul>
+
     <!-- quotes -->
     <div id="quotes">
       <span class="quotes__quote"></span>
