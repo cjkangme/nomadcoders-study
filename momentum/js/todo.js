@@ -2,6 +2,8 @@ const toDoForm = document.querySelector('#todo-form');
 const newToDoInput = toDoForm.querySelector('input');
 const toDoList = document.querySelector('#todo-list');
 
+const toDos = [];
+
 function handleEditSubmit() {
   const editList = document.querySelector('.edit');
   const text = editList.value;
@@ -12,23 +14,6 @@ function handleEditSubmit() {
     'javascript:if(event.keyCode==13) {handleEditSubmit()}'
   );
   editList.setAttribute('readonly', 'true');
-}
-
-function editToDo(event) {
-  li = event.target.parentNode;
-  text = event.target.previousSibling;
-  text.removeAttribute('readonly');
-  text.classList.add('edit');
-  text.focus();
-  text.setAttribute(
-    'onKeypress',
-    'javascript:if(event.keyCode==13) {handleEditSubmit()}'
-  );
-}
-
-function deleteToDo(event) {
-  li = event.target.parentNode;
-  li.remove();
 }
 
 function addNewToDo(newToDo) {
@@ -53,11 +38,34 @@ function addNewToDo(newToDo) {
   toDoList.appendChild(newList);
 }
 
+function editToDo(event) {
+  li = event.target.parentNode;
+  text = event.target.previousSibling;
+  text.removeAttribute('readonly');
+  text.classList.add('edit');
+  text.focus();
+  text.setAttribute(
+    'onKeypress',
+    'javascript:if(event.keyCode==13) {handleEditSubmit()}'
+  );
+}
+
+function deleteToDo(event) {
+  li = event.target.parentNode;
+  li.remove();
+}
+
+function saveToDos() {
+  localStorage.setItem('toDos', JSON.stringify(toDos));
+}
+
 function handleTodoSumbit(event) {
   const newToDo = newToDoInput.value;
   event.preventDefault();
   newToDoInput.value = '';
+  toDos.push(newToDo);
   addNewToDo(newToDo);
+  saveToDos();
 }
 
 toDoForm.addEventListener('submit', handleTodoSumbit);
