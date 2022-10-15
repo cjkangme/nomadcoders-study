@@ -3,6 +3,7 @@ const newToDoInput = toDoForm.querySelector('input');
 const toDoList = document.querySelector('#todo-list');
 
 const toDos = [];
+const TODOS_KEY = 'toDos';
 
 function handleEditSubmit() {
   const editList = document.querySelector('.edit');
@@ -56,7 +57,7 @@ function deleteToDo(event) {
 }
 
 function saveToDos() {
-  localStorage.setItem('toDos', JSON.stringify(toDos));
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
 function handleTodoSumbit(event) {
@@ -69,3 +70,11 @@ function handleTodoSumbit(event) {
 }
 
 toDoForm.addEventListener('submit', handleTodoSumbit);
+
+localStorageToDos = localStorage.getItem(TODOS_KEY);
+
+if (localStorageToDos !== null) {
+  const parsedToDos = JSON.parse(localStorageToDos);
+  parsedToDos.forEach(addNewToDo);
+  parsedToDos.forEach((item) => console.log(item));
+}
