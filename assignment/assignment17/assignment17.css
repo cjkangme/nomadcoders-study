@@ -1,0 +1,36 @@
+.hidden {
+  display: none !important;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.modal {
+  width: 500px;
+  height: 200px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__bg {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__content {
+  position: absolute;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal__btn {
+  margin-top: 30px;
+}

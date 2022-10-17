@@ -54,17 +54,13 @@ function editToDo(event) {
   );
 }
 
-function deleteFilter(toDos) {
-  return parseInt(liId) !== toDos.id;
-}
-
 function deleteToDo(event) {
   const li = event.target.parentNode;
   const liId = parseInt(event.target.parentNode.id);
-  // const liIndex = toDos.findIndex((obj) => obj.id === liId);
-  // toDos.splice(liIndex, 1);
-  toDos = toDos.filter((toDo) => toDo.id !== liId);
-  saveToDos();
+  console.log(liId);
+  const liIndex = toDos.findIndex((obj) => obj.id === liId);
+  toDos.splice(liIndex, 1);
+  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
   li.remove();
 }
 
