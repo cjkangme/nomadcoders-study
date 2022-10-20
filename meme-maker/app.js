@@ -2,6 +2,8 @@ const canvas = document.querySelector('#canvas');
 const ctx = canvas.getContext('2d');
 
 const lineWidth = document.querySelector('#line-width');
+const color = document.querySelector('#color');
+const colorOptions = document.querySelectorAll('.color-option');
 
 const colors = [
   '#C7395F',
@@ -46,9 +48,25 @@ function onLineWidthChange(event) {
   ctx.lineWidth = event.target.value;
 }
 
+function onColorChange(event) {
+  ctx.strokeStyle = event.target.value;
+  ctx.fillStyle = event.target.value;
+}
+
+function onColorOptionClick(event) {
+  colorValue = event.target.dataset.color;
+  ctx.strokeStyle = colorValue;
+  ctx.fillStyle = colorValue;
+  color.value = colorValue;
+}
+
 canvas.addEventListener('mousemove', drawMousemove);
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mouseup', cancelDrawing);
 canvas.addEventListener('mouseout', cancelDrawing);
 
 lineWidth.addEventListener('change', onLineWidthChange);
+color.addEventListener('change', onColorChange);
+colorOptions.forEach((color) =>
+  color.addEventListener('click', onColorOptionClick)
+);
