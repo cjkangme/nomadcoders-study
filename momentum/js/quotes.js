@@ -101,5 +101,5 @@ function makeRandomNumber() {
 
 const randomNumber = makeRandomNumber();
 
-quote.innerText = quotes[randomNumber].quote;
-author.innerText = quotes[randomNumber].author;
+quote.innerText = `"${quotes[randomNumber].quote}"`;
+author.innerText = ` - ${quotes[randomNumber].author}`;

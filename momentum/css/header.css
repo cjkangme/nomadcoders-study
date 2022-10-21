@@ -1,0 +1,52 @@
+header {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 50px;
+  padding: 15px;
+  padding-bottom: 0px;
+}
+
+#search-console {
+  cursor: pointer;
+}
+
+.links__input {
+  padding: 2px;
+  cursor: pointer;
+  opacity: 0;
+  border-bottom: 2px solid #fff;
+  transition: opacity 0.5s ease;
+}
+
+#search-console:hover .links__input {
+  opacity: 50%;
+}
+
+.links__input:focus {
+  opacity: 100% !important;
+}
+
+#weather {
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: #000;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.weather__icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 5px;
+}
+
+.weather__temp {
+  font-weight: 600;
+}

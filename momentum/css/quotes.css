@@ -1,0 +1,17 @@
+#quotes {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+.quotes__quote {
+  font-weight: 600;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.quotes__author {
+  text-align: right;
+}

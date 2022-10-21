@@ -14,7 +14,10 @@ function makeRandomNumber() {
 }
 
 const chosenImage = images[makeRandomNumber()];
+const bgElement = document.querySelector('#background');
 const bgImage = document.createElement('img');
 
-bgImage.src = `assets/images/${chosenImage}`;
-document.body.appendChild(bgImage);
+bgElement.style.backgroundImage = `url('assets/images/${chosenImage}')`;
+// bgImage.src = `assets/images/${chosenImage}`;
+
+// document.body.appendChild(bgImage);

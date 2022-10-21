@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Momentum App</title>
 
+    <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <script
@@ -14,8 +15,27 @@
     ></script>
   </head>
   <body>
+    <!-- Background -->
+    <div id="background"></div>
+    <!-- Links -->
+    <header id="header">
+      <form id="search-console">
+        <span>Search</span>
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input class="links__input" type="text" />
+      </form>
+      <!-- Weather -->
+      <div id="weather">
+        <img class="weather__icon" />
+        <div>
+          <div class="weather__temp"></div>
+          <div class="weather__name"></div>
+        </div>
+      </div>
+    </header>
+
     <!-- Clock -->
-    <h2 id="clock">00:00:00</h2>
+    <h2 id="clock">00:00</h2>
 
     <!-- Greeting -->
     <form class="login-form hidden">
@@ -47,17 +67,15 @@
       <span class="quotes__author"></span>
     </div>
 
-    <!-- Weather -->
-    <div id="weather">
-      <img class="weather__icon" />
-      <span class="weather__name"></span>
-      <span class="weather__temp"></span>
-    </div>
     <script src="js/greeting.js"></script>
     <script src="js/clock.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/background.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
+    <script
+      src="https://kit.fontawesome.com/6682c71b2e.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
