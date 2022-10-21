@@ -8,6 +8,8 @@ const clearBtn = document.querySelector('#clear-btn');
 const eraseBtn = document.querySelector('#erase-btn');
 const colorOptions = document.querySelectorAll('.color-option');
 const fileInput = document.querySelector('#file-input');
+const textInput = document.querySelector('#text-input');
+const saveBtn = document.querySelector('#save-btn');
 
 const colors = [
   '#C7395F',
@@ -28,6 +30,7 @@ canvas.width = 800;
 canvas.height = 800;
 
 ctx.lineWidth = lineWidth.value;
+ctx.lineCap = 'round';
 
 let isPainting = false;
 let isFill = false;
@@ -92,6 +95,7 @@ function onEraseClick() {
 }
 
 function onFileChange(event) {
+  onClearClick();
   const file = event.target.files[0];
   const url = URL.createObjectURL(file);
   const image = new Image();
@@ -102,11 +106,23 @@ function onFileChange(event) {
   };
 }
 
+function onDoubleClick(event) {
+  const text = textInput.value;
+  if (text !== '') {
+    ctx.save();
+    ctx.lineWidth = 3;
+    ctx.font = '64px impact';
+    ctx.strokeText(text, event.offsetX, event.offsetY);
+    ctx.restore();
+  }
+}
+
 canvas.addEventListener('mousemove', drawMousemove);
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mouseup', cancelDrawing);
 canvas.addEventListener('mouseout', cancelDrawing);
 canvas.addEventListener('click', startFilling);
+canvas.addEventListener('dblclick', onDoubleClick);
 
 lineWidth.addEventListener('change', onLineWidthChange);
 
