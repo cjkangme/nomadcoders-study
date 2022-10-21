@@ -7,6 +7,7 @@ const modeBtn = document.querySelector('#mode-btn');
 const clearBtn = document.querySelector('#clear-btn');
 const eraseBtn = document.querySelector('#erase-btn');
 const colorOptions = document.querySelectorAll('.color-option');
+const fileInput = document.querySelector('#file-input');
 
 const colors = [
   '#C7395F',
@@ -90,6 +91,17 @@ function onEraseClick() {
   modeBtn.innerText = 'Fill';
 }
 
+function onFileChange(event) {
+  const file = event.target.files[0];
+  const url = URL.createObjectURL(file);
+  const image = new Image();
+  image.src = url;
+  image.onload = function () {
+    ctx.drawImage(image, 0, 0);
+    fileInput.value = null;
+  };
+}
+
 canvas.addEventListener('mousemove', drawMousemove);
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mouseup', cancelDrawing);
@@ -106,3 +118,4 @@ colorOptions.forEach((color) =>
 modeBtn.addEventListener('click', onModeClick);
 clearBtn.addEventListener('click', onClearClick);
 eraseBtn.addEventListener('click', onEraseClick);
+fileInput.addEventListener('change', onFileChange);
