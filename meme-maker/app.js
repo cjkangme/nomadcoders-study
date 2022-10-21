@@ -95,7 +95,7 @@ function onEraseClick() {
 }
 
 function onFileChange(event) {
-  onClearClick();
+  startFilling();
   const file = event.target.files[0];
   const url = URL.createObjectURL(file);
   const image = new Image();
@@ -117,6 +117,14 @@ function onDoubleClick(event) {
   }
 }
 
+function onSaveClick(event) {
+  const url = canvas.toDataURL();
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'myDrawing.png';
+  a.click();
+}
+
 canvas.addEventListener('mousemove', drawMousemove);
 canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mouseup', cancelDrawing);
@@ -135,3 +143,4 @@ modeBtn.addEventListener('click', onModeClick);
 clearBtn.addEventListener('click', onClearClick);
 eraseBtn.addEventListener('click', onEraseClick);
 fileInput.addEventListener('change', onFileChange);
+saveBtn.addEventListener('click', onSaveClick);
