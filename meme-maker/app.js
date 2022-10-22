@@ -117,7 +117,7 @@ function onDoubleClick(event) {
   }
 }
 
-function onSaveClick(event) {
+function onSaveClick() {
   const url = canvas.toDataURL();
   const a = document.createElement('a');
   a.href = url;
