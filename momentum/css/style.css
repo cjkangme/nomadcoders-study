@@ -1,6 +1,7 @@
 @import 'header.css';
 @import 'clock.css';
 @import 'quotes.css';
+@import 'todo.css';
 
 body {
   display: flex;
@@ -20,8 +21,16 @@ body {
 input {
   border: none;
   outline: none;
-  color: #fff;
+  color: #000;
   background-color: rgba(0, 0, 0, 0);
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
 }
 
 /* 배경 */

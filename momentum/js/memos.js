@@ -1,18 +1,18 @@
-const toDoForm = document.querySelector('#todo-form');
-const newToDoInput = toDoForm.querySelector('.todo-form__input');
-const toDoList = document.querySelector('#todo-list');
+const memoForm = document.getElementById('memo-form');
+const newMemoInput = memoForm.querySelector('.memo-form__input');
+const memoList = document.getElementById('memo-list');
 
-let toDos = [];
-const TODOS_KEY = 'toDos';
+let memos = [];
+const MEMOS_KEY = 'memos';
 
 function handleEditSubmit(li) {
   const editList = document.querySelector('.edit');
   const text = editList.value;
   const liId = parseInt(li.id);
-  toDos.forEach((obj) => {
+  memos.forEach((obj) => {
     if (obj.id === liId) {
       obj.text = text;
-      saveToDos();
+      saveMemos();
     }
   });
   editList.value = text;
@@ -24,7 +24,7 @@ function handleEditSubmit(li) {
   editList.setAttribute('readonly', 'true');
 }
 
-function addNewToDo(newToDoObj) {
+function addNewMemo(newMemoObj) {
   const newList = document.createElement('li');
   const newText = document.createElement('input');
   const editButton = document.createElement('button');
@@ -33,12 +33,12 @@ function addNewToDo(newToDoObj) {
   editButton.classList.add('fa-solid', 'fa-pen-to-square');
   deleteButton.classList.add('fa-solid', 'fa-trash');
 
-  editButton.addEventListener('click', editToDo);
-  deleteButton.addEventListener('click', deleteToDo);
+  editButton.addEventListener('click', editMemo);
+  deleteButton.addEventListener('click', deleteMemo);
 
-  newList.id = newToDoObj.id;
+  newList.id = newMemoObj.id;
   newList.appendChild(newText);
-  newText.value = newToDoObj.text;
+  newText.value = newMemoObj.text;
   newText.setAttribute('readonly', true);
   newText.classList.add('list__item');
   newText.addEventListener('click', handelListClick);
@@ -46,10 +46,10 @@ function addNewToDo(newToDoObj) {
   newList.appendChild(editButton);
   newList.appendChild(deleteButton);
 
-  toDoList.appendChild(newList);
+  memoList.appendChild(newList);
 }
 
-function editToDo(event) {
+function editMemo(event) {
   li = event.target.parentNode;
   text = event.target.previousSibling;
   text.removeAttribute('readonly');
@@ -61,33 +61,33 @@ function editToDo(event) {
   );
 }
 
-function deleteFilter(toDos) {
-  return parseInt(liId) !== toDos.id;
+function deleteFilter(Memos) {
+  return parseInt(liId) !== Memos.id;
 }
 
-function deleteToDo(event) {
+function deleteMemo(event) {
   const li = event.target.parentNode;
   const liId = parseInt(event.target.parentNode.id);
-  toDos = toDos.filter((toDo) => toDo.id !== liId);
-  saveToDos();
+  memos = memos.filter((memo) => memo.id !== liId);
+  saveMemos();
   li.remove();
 }
 
-function saveToDos() {
-  localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
+function saveMemos() {
+  localStorage.setItem(MEMOS_KEY, JSON.stringify(memos));
 }
 
-function handleTodoSumbit(event) {
-  const newToDo = newToDoInput.value;
+function handleMemoSumbit(event) {
+  const newMemo = newMemoInput.value;
   event.preventDefault();
-  newToDoInput.value = '';
-  const newToDoObj = {
-    text: newToDo,
+  newMemoInput.value = '';
+  const newMemoObj = {
+    text: newMemo,
     id: Date.now(),
   };
-  toDos.push(newToDoObj);
-  addNewToDo(newToDoObj);
-  saveToDos();
+  memos.push(newMemoObj);
+  addNewMemo(newMemoObj);
+  saveMemos();
 }
 
 function handelListClick(event) {
@@ -102,12 +102,12 @@ function handelListClick(event) {
   }
 }
 
-toDoForm.addEventListener('submit', handleTodoSumbit);
+memoForm.addEventListener('submit', handleMemoSumbit);
 
-localStorageToDos = localStorage.getItem(TODOS_KEY);
+const localStorageMemos = localStorage.getItem(MEMOS_KEY);
 
-if (localStorageToDos !== null) {
-  const parsedToDos = JSON.parse(localStorageToDos);
-  toDos = parsedToDos;
-  parsedToDos.forEach(addNewToDo);
+if (localStorageMemos !== null) {
+  const parsedMemos = JSON.parse(localStorageMemos);
+  memos = parsedMemos;
+  parsedMemos.forEach(addNewMemo);
 }
