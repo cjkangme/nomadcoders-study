@@ -10,6 +10,30 @@ const colorOptions = document.querySelectorAll('.color-option');
 const fileInput = document.querySelector('#file-input');
 const textInput = document.querySelector('#text-input');
 const saveBtn = document.querySelector('#save-btn');
+const dropdownBtn = document.querySelector('.dropdown-btn');
+const dropdownItem = document.querySelector('.dropdown-item');
+const dropdownOpt = document.querySelectorAll('.dropdown-option');
+
+let fontVar = 'impact';
+
+const nanumGothic = new FontFace(
+  'NanumBarunGothic',
+  'url(./assets/fonts/NanumBarunGothic.otf)'
+);
+document.fonts.add(nanumGothic);
+nanumGothic.load();
+const batang = new FontFace(
+  'KoPubWorldBatang',
+  'url(./assets/fonts/KoPubWorld_Batang.otf)'
+);
+batang.load();
+document.fonts.add(batang);
+const dotum = new FontFace(
+  'KoPubWorldDotum',
+  'url(./assets/fonts/KoPubWorld_Dotum.otf)'
+);
+document.fonts.add(dotum);
+dotum.load();
 
 const colors = [
   '#C7395F',
@@ -111,8 +135,8 @@ function onDoubleClick(event) {
   if (text !== '') {
     ctx.save();
     ctx.lineWidth = 3;
-    ctx.font = '64px impact';
-    ctx.strokeText(text, event.offsetX, event.offsetY);
+    ctx.font = `32px ${fontVar}`;
+    ctx.fillText(text, event.offsetX, event.offsetY);
     ctx.restore();
   }
 }
@@ -123,6 +147,23 @@ function onSaveClick() {
   a.href = url;
   a.download = 'myDrawing.png';
   a.click();
+}
+
+function onDropdownClick() {
+  dropdownItem.classList.toggle('show');
+  // if (dropdownItem.classList.contains('show')) {
+  //   dropdownItem.classList.remove('show');
+  // } else {
+  //   dropdownItem.classList.add('show');
+  // }
+}
+
+function onDropdownItemClick(event) {
+  dropdownItem.classList.remove('show');
+  const btn = document.querySelector('.dropdown-btn');
+  btn.innerText = event.target.innerText;
+  const font = event.target.dataset.font;
+  fontVar = font;
 }
 
 canvas.addEventListener('mousemove', drawMousemove);
@@ -144,3 +185,8 @@ clearBtn.addEventListener('click', onClearClick);
 eraseBtn.addEventListener('click', onEraseClick);
 fileInput.addEventListener('change', onFileChange);
 saveBtn.addEventListener('click', onSaveClick);
+dropdownBtn.addEventListener('click', onDropdownClick);
+
+dropdownOpt.forEach((item) =>
+  item.addEventListener('click', onDropdownItemClick)
+);

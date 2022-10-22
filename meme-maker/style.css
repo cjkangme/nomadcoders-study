@@ -91,3 +91,58 @@ button:hover {
 #file-label:hover {
   opacity: 0.8;
 }
+
+#font-dropdown {
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown-btn {
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: gray;
+  color: #fff;
+  padding: 10px;
+  transition: 0.2s linear;
+}
+
+.dropdown-btn:hover {
+  opacity: 0.8;
+}
+
+.dropdown-item {
+  position: absolute;
+  z-index: 1;
+  display: none;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  border-radius: 10px;
+}
+
+.dropdown-item div {
+  padding: 10px;
+}
+
+.dropdown-item div:not(:last-child) {
+  border-bottom: 1px solid #000;
+}
+
+.dropdown-item div:first-child {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.dropdown-item div:last-child {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.dropdown-item div:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.show {
+  display: block;
+}
