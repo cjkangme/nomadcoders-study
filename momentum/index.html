@@ -22,7 +22,7 @@
       <form id="search-console">
         <span>Search</span>
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input class="links__input" type="text" />
+        <input class="links__input input-text" type="text" />
       </form>
       <!-- Weather -->
       <div id="weather">
@@ -38,16 +38,17 @@
     <h2 id="clock">00:00</h2>
 
     <!-- Greeting -->
-    <form class="login-form hidden">
-      <input
-        type="text"
-        placeholder="What's your name?"
-        maxlength="15"
-        class="login-form__input"
-        required
-      />
-      <button class="login-form__button">Log in</button>
-    </form>
+    <div id="login" class="hidden">
+      <h1 class="login__header">Hello! What's your name?</h1>
+      <form class="login-form">
+        <input
+          type="text"
+          maxlength="15"
+          class="login-form__input input-text"
+          required
+        />
+      </form>
+    </div>
     <h1 id="greeting" class="hidden"></h1>
 
     <div id="todo">
@@ -55,7 +56,7 @@
       <div class="grid-container__one">
         <form id="todo-form">
           <input
-            class="todo-form__input"
+            class="todo-form__input input-text"
             type="text"
             placeholder="New Todo"
             required
@@ -67,7 +68,7 @@
       <div class="grid-container__two">
         <form id="memo-form">
           <input
-            class="memo-form__input"
+            class="memo-form__input input-text"
             type="text"
             placeholder="New Memo"
             required
@@ -78,157 +79,177 @@
 
       <!-- Time Table -->
       <div id="time-table" class="grid-container__three">
+        <button class="time-table__clear">Clear</button>
         <div class="time-table__six">
-          <div class="time-table__six-1"></div>
-          <div class="time-table__six-2"></div>
-          <div class="time-table__six-3"></div>
-          <div class="time-table__six-4"></div>
-          <div class="time-table__six-5"></div>
-          <div class="time-table__six-6"></div>
+          <span>06:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__seven">
-          <div class="time-table__seven-1"></div>
-          <div class="time-table__seven-2"></div>
-          <div class="time-table__seven-3"></div>
-          <div class="time-table__seven-4"></div>
-          <div class="time-table__seven-5"></div>
-          <div class="time-table__seven-6"></div>
+          <span>07:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__eight">
-          <div class="time-table__eight-1"></div>
-          <div class="time-table__eight-2"></div>
-          <div class="time-table__eight-3"></div>
-          <div class="time-table__eight-4"></div>
-          <div class="time-table__eight-5"></div>
-          <div class="time-table__eight-6"></div>
+          <span>08:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__nine">
-          <div class="time-table__nine-1"></div>
-          <div class="time-table__nine-2"></div>
-          <div class="time-table__nine-3"></div>
-          <div class="time-table__nine-4"></div>
-          <div class="time-table__nine-5"></div>
-          <div class="time-table__nine-6"></div>
+          <span>09:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__ten">
-          <div class="time-table__ten-1"></div>
-          <div class="time-table__ten-2"></div>
-          <div class="time-table__ten-3"></div>
-          <div class="time-table__ten-4"></div>
-          <div class="time-table__ten-5"></div>
-          <div class="time-table__ten-6"></div>
+          <span>10:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__eleven">
-          <div class="time-table__eleven-1"></div>
-          <div class="time-table__eleven-2"></div>
-          <div class="time-table__eleven-3"></div>
-          <div class="time-table__eleven-4"></div>
-          <div class="time-table__eleven-5"></div>
-          <div class="time-table__eleven-6"></div>
+          <span>11:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__twelve">
-          <div class="time-table__twelve-1"></div>
-          <div class="time-table__twelve-2"></div>
-          <div class="time-table__twelve-3"></div>
-          <div class="time-table__twelve-4"></div>
-          <div class="time-table__twelve-5"></div>
-          <div class="time-table__twelve-6"></div>
+          <span>12:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__thirteen">
-          <div class="time-table__thirteen-1"></div>
-          <div class="time-table__thirteen-2"></div>
-          <div class="time-table__thirteen-3"></div>
-          <div class="time-table__thirteen-4"></div>
-          <div class="time-table__thirteen-5"></div>
-          <div class="time-table__thirteen-6"></div>
+          <span>13:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__fourteen">
-          <div class="time-table__fourteen-1"></div>
-          <div class="time-table__fourteen-2"></div>
-          <div class="time-table__fourteen-3"></div>
-          <div class="time-table__fourteen-4"></div>
-          <div class="time-table__fourteen-5"></div>
-          <div class="time-table__fourteen-6"></div>
+          <span>14:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__fifteen">
-          <div class="time-table__fifteen-1"></div>
-          <div class="time-table__fifteen-2"></div>
-          <div class="time-table__fifteen-3"></div>
-          <div class="time-table__fifteen-4"></div>
-          <div class="time-table__fifteen-5"></div>
-          <div class="time-table__fifteen-6"></div>
+          <span>15:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__sixteen">
-          <div class="time-table__sixteen-1"></div>
-          <div class="time-table__sixteen-2"></div>
-          <div class="time-table__sixteen-3"></div>
-          <div class="time-table__sixteen-4"></div>
-          <div class="time-table__sixteen-5"></div>
-          <div class="time-table__sixteen-6"></div>
+          <span>16:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__seventeen">
-          <div class="time-table__seventeen-1"></div>
-          <div class="time-table__seventeen-2"></div>
-          <div class="time-table__seventeen-3"></div>
-          <div class="time-table__seventeen-4"></div>
-          <div class="time-table__seventeen-5"></div>
-          <div class="time-table__seventeen-6"></div>
+          <span>17:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-tabel__eighteen">
-          <div class="time-table__eighteen-1"></div>
-          <div class="time-table__eighteen-2"></div>
-          <div class="time-table__eighteen-3"></div>
-          <div class="time-table__eighteen-4"></div>
-          <div class="time-table__eighteen-5"></div>
-          <div class="time-table__eighteen-6"></div>
+          <span>18:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__nineteen">
-          <div class="time-table__nineteen-1"></div>
-          <div class="time-table__nineteen-2"></div>
-          <div class="time-table__nineteen-3"></div>
-          <div class="time-table__nineteen-4"></div>
-          <div class="time-table__nineteen-5"></div>
-          <div class="time-table__nineteen-6"></div>
+          <span>19:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__twenty">
-          <div class="time-table__twenty-1"></div>
-          <div class="time-table__twenty-2"></div>
-          <div class="time-table__twenty-3"></div>
-          <div class="time-table__twenty-4"></div>
-          <div class="time-table__twenty-5"></div>
-          <div class="time-table__twenty-6"></div>
+          <span>20:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__twentyone">
-          <div class="time-table__twentyone-1"></div>
-          <div class="time-table__twentyone-2"></div>
-          <div class="time-table__twentyone-3"></div>
-          <div class="time-table__twentyone-4"></div>
-          <div class="time-table__twentyone-5"></div>
-          <div class="time-table__twentyone-6"></div>
+          <span>21:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__twentytwo">
-          <div class="time-table__twentytwo-1"></div>
-          <div class="time-table__twentytwo-2"></div>
-          <div class="time-table__twentytwo-3"></div>
-          <div class="time-table__twentytwo-4"></div>
-          <div class="time-table__twentytwo-5"></div>
-          <div class="time-table__twentytwo-6"></div>
+          <span>22:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__twentythree">
-          <div class="time-table__twentythree-1"></div>
-          <div class="time-table__twentythree-2"></div>
-          <div class="time-table__twentythree-3"></div>
-          <div class="time-table__twentythree-4"></div>
-          <div class="time-table__twentythree-5"></div>
-          <div class="time-table__twentythree-6"></div>
+          <span>23:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
         <div class="time-table__twentyfour">
-          <div class="time-table__twentyfour-1"></div>
-          <div class="time-table__twentyfour-2"></div>
-          <div class="time-table__twentyfour-3"></div>
-          <div class="time-table__twentyfour-4"></div>
-          <div class="time-table__twentyfour-5"></div>
-          <div class="time-table__twentyfour-6"></div>
+          <span>24:00</span>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
+          <div class="time-table__item"></div>
         </div>
       </div>
     </div>

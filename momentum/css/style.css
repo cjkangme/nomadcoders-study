@@ -2,6 +2,7 @@
 @import 'clock.css';
 @import 'quotes.css';
 @import 'todo.css';
+@import 'login.css';
 
 body {
   display: flex;
@@ -15,7 +16,7 @@ body {
 
 /* 공통 요소 */
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 input {

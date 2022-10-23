@@ -92,7 +92,7 @@ function onColorChange(event) {
 }
 
 function onColorOptionClick(event) {
-  colorValue = event.target.dataset.color;
+  const colorValue = event.target.dataset.color;
   ctx.strokeStyle = colorValue;
   ctx.fillStyle = colorValue;
   color.value = colorValue;
