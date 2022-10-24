@@ -19,7 +19,7 @@ function handleEditSubmit(li) {
   editList.classList.remove('edit');
   editList.removeAttribute(
     'onKeypress',
-    'javascript:if(event.keyCode==13) {handleEditSubmit()}'
+    'javascript:if(event.keyCode==13) {handleEditSubmit(li)}'
   );
   editList.setAttribute('readonly', 'true');
 }

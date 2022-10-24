@@ -23,7 +23,8 @@ let colorValue = '';
 let toDos = [];
 const TODOS_KEY = 'toDos';
 
-function handleEditSubmit(li) {
+function handleEditSubmitToDo(li) {
+  console.log('hello');
   const editList = document.querySelector('.edit');
   const text = editList.value;
   const liId = parseInt(li.id);
@@ -37,7 +38,7 @@ function handleEditSubmit(li) {
   editList.classList.remove('edit');
   editList.removeAttribute(
     'onKeypress',
-    'javascript:if(event.keyCode==13) {handleEditSubmit()}'
+    'javascript:if(event.keyCode==13) {handleEditSubmit(li)}'
   );
   editList.setAttribute('readonly', 'true');
 }
@@ -88,7 +89,7 @@ function editToDo(event) {
   text.focus();
   text.setAttribute(
     'onKeypress',
-    'javascript:if(event.keyCode==13) {handleEditSubmit(li)}'
+    'javascript:if(event.keyCode==13) {handleEditSubmitToDo(li)}'
   );
 }
 

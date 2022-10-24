@@ -10,6 +10,9 @@
 [Assignment9](https://cjkangme.github.io/nomadcoders-study/assignment/assignment9.html)
 [Assignment10](https://cjkangme.github.io/nomadcoders-study/assignment/assignment10.html)
 [Assignment12](https://cjkangme.github.io/nomadcoders-study/assignment/assignment12.html)
+
+### Javascript
+
 [Assignment17](https://cjkangme.github.io/nomadcoders-study/assignment/assignment17/assignment17.html)
 [Assignment18](https://cjkangme.github.io/nomadcoders-study/assignment/assignment18/assignment18.html)
 [Assignment19](https://cjkangme.github.io/nomadcoders-study/assignment/assignment19/assignment19.html)
